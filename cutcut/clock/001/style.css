@@ -1,0 +1,125 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*   background-color: #0093E9; */
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+}
+
+.container {
+  width: 350px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #80dfc5;
+  box-shadow: 1px 1px 13px #888;
+  border-radius: 25% 8% 0 0;
+}
+
+.clock {
+  width: 80%;
+  height: 80%;
+  background: #d66;
+  border: 15px solid #d66;
+  box-shadow: 0 0 10px #a33 inset;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #fff;
+  padding: 5px;
+  font-size: 30px;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+/* -----1-12---------- */
+.number {
+  width: 95%;
+  height: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  /*   border:1px solid #222; */
+}
+
+.clockNum1206,
+.clockNum0107,
+.clockNum0208 {
+  flex-direction: column;
+}
+
+.clockNum0309,
+.clockNum0410,
+.clockNum0511 {
+  flex-direction: row-reverse;
+}
+
+.clockNum0107,
+.clockNum0410 {
+  transform: rotate(30deg);
+}
+
+.clockNum0107 li,
+.clockNum0410 li {
+  transform: rotate(-30deg);
+}
+
+.clockNum0208,
+.clockNum0511 {
+  transform: rotate(60deg);
+}
+
+.clockNum0208 li,
+.clockNum0511 li {
+  transform: rotate(-60deg);
+}
+
+/* ------------------------- */
+.circle {
+  width: 28px;
+  height: 28px;
+  background: #f66;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 10;
+}
+
+.hand {
+  position: absolute;
+  bottom: 50%;
+  border-radius: 5px 5px 0 0;
+  border: 2px solid #fff;
+  transform-origin: bottom;
+}
+
+.minute-hand {
+  width: 8px;
+  height: 36%;
+  background: #d66;
+  transform: rotate(0deg);
+}
+
+.hour-hand {
+  width: 8px;
+  height: 28%;
+  background: #d66;
+  transform: rotate(180deg);
+}
+
+.second-hand {
+  width: 4px;
+  height: 37%;
+  background: #ccc;
+  border: none;
+  transform: rotate(330deg);
+}

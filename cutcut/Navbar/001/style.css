@@ -1,0 +1,80 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  text-align: center;
+  color: #55e;
+}
+
+.wrapper {
+  height: calc(100vh - 10rem);
+  background: #333;
+  padding: 5rem;
+}
+
+/* ---------------------- */
+.nav {
+  width: 900px;
+  margin: 0 auto;
+  background: #f70;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #222;
+  padding: 0 1rem;
+}
+
+.nav .logo {
+  color: #fff;
+}
+
+.nav .menu {
+  display: flex;
+}
+
+.nav .menu li a {
+  display: block;
+  padding: 1rem 2rem;
+}
+
+.nav .menu li {
+  position: relative;
+  transition: .2s;
+}
+
+.nav .menu li:hover {
+  background: #ccf;
+  box-shadow: 3px 3px 5px #11111180;
+}
+
+.nav .menu li:hover .child-menu {
+  opacity: 1;
+  z-index: 1;
+  /* 因為是用opacity 下面z-index設定-1 這裡就設定1*/
+  transform: translateY(0);
+}
+
+/* ------------------ */
+.menu .child-menu {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  /* 因為是用opacity隱藏所以要設定-1才不會經過也顯示出來*/
+  opacity: 0;
+  transform: translateY(-8%);
+  transition: .3s;
+  box-shadow: 3px 3px 5px #11111180;
+}
+
+.menu .child-menu a {
+  background: #111;
+  transition: .3s;
+}
+
+.menu .child-menu a:hover {
+  background: #fa0;
+}
